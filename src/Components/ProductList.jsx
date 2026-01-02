@@ -9,7 +9,7 @@ import { MdDelete } from "react-icons/md";
 import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2'
-import {useDispatch} from "react-redux"
+import {useDispatch,useSelector} from "react-redux"
 import {addItem,removeItem} from "../store/cartSlice"
 
 
@@ -72,9 +72,28 @@ setproduct(newProductList);
 }
 
 let dispatch = useDispatch()
+let cartstate = useSelector((state)=>{return state.cart})
 
 let addItemtoCart = (product)=>{
-  dispatch( addItem(product) )
+  let checkProduct = cartstate.some(cartProduct=> cartProduct.id === product.id)
+  if(!checkProduct){
+  dispatch( addItem(product))
+  Swal.fire({
+      title: "Success",
+      text: "Your Product Added Successfully...",
+      icon: "success",
+      footer:"Keeping Shopping 😍🤩"
+    });
+  }
+  else{
+    // alert("Product Already Add... if you wnat more Quantity Add Itms on Check outs!!😃😃")
+  Swal.fire({
+      title: "Oops!!",
+      text: "This Product Already Added 😢🥴",
+      icon: "error",
+      footer:"Add Other Products"
+    });  
+  }
 }
 
 

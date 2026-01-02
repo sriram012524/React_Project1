@@ -22,7 +22,7 @@ function NavBar() {
             <Nav.Link as={Link} to="/"> Home </Nav.Link>
             <Nav.Link as={Link} to="/login/Dear User🤩!!">Login</Nav.Link>
             <Nav.Link as={Link} to="/Products">Products</Nav.Link>
-            <Nav.Link as={Link} to="/NewProducts">Add New Products</Nav.Link>
+            <Nav.Link as={Link} to="/Signup">Signup</Nav.Link>
           </Nav>
             <Button variant='contained' color='warning' onClick={()=>navigate1('/WishList')} ><BiSolidCartAdd/></Button>
           <Form className="d-flex">

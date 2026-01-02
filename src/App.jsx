@@ -12,7 +12,14 @@ import Notfound from './Components/Notfound'
 import NewProducts from './Components/newProducts'
 import UpdateProduct from './Components/UpdateProduct'
 import WishList from './Components/WishList'
+import SignUp from './Components/SignUp'
 
+if(!localStorage.getItem("cart")){
+localStorage.setItem("cart",JSON.stringify([]))
+}
+
+// let datafromWeb = JSON.parse(localStorage.getItem("cart"));
+// localStorage.removeItem("cart")
 
 
 function App() {
@@ -32,6 +39,7 @@ function App() {
         <Route path='/NewProducts' element={<NewProducts/>} />
         <Route path= '/UpdateProduct/:id' element={<UpdateProduct/>}/>
         <Route path='/WishList' element={<WishList/>}/>
+        <Route path='/Signup' element={<SignUp/>}/>
         <Route path='*' element={<Notfound/>}/>
       </Routes>
     </Router>
