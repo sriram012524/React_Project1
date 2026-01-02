@@ -11,6 +11,8 @@ import NavBar from './Components/NavBar'
 import Notfound from './Components/Notfound'
 import NewProducts from './Components/newProducts'
 import UpdateProduct from './Components/UpdateProduct'
+import WishList from './Components/WishList'
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
         <Route path='/login/:user'element={<Login/>} />
         <Route path='/NewProducts' element={<NewProducts/>} />
         <Route path= '/UpdateProduct/:id' element={<UpdateProduct/>}/>
+        <Route path='/WishList' element={<WishList/>}/>
         <Route path='*' element={<Notfound/>}/>
       </Routes>
     </Router>

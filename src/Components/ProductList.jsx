@@ -9,6 +9,8 @@ import { MdDelete } from "react-icons/md";
 import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2'
+import {useDispatch} from "react-redux"
+import {addItem,removeItem} from "../store/cartSlice"
 
 
 const ProductList = () => {
@@ -69,6 +71,13 @@ setproduct(newProductList);
   })
 }
 
+let dispatch = useDispatch()
+
+let addItemtoCart = (product)=>{
+  dispatch( addItem(product) )
+}
+
+
 if(isLoading){
  
   return <div> 
@@ -102,7 +111,7 @@ if(isLoading){
       <Card.Footer style={{display:"flex" , justifyContent:"space-evenly",alignItems:"center" }}>
         <Card.Text >
         </Card.Text>
-       <Button variant="primary"><FaCartShopping /></Button>
+       <Button variant="primary" onClick={()=>addItemtoCart(product)}><FaCartShopping /></Button>
          <Button variant='secondary' onClick={()=>{navigate(`/UpdateProduct/${product.id}`) } }>
           <RiEdit2Fill />
           </Button>
