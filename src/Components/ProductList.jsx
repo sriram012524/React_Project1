@@ -107,8 +107,9 @@ if(isLoading){
 }
   return (
     <div>
-      <article>
-        <span> To Create New Product </span>
+      <article className='PL'>
+       <span>Create New Products</span>
+       <span>{" "}</span>
         <Button onClick={()=>navigate("/NewProducts")}>Click Me !</Button>
       </article>
       <h1>Product-List</h1>

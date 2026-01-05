@@ -30,11 +30,11 @@ function App() {
     <Router>
     <NavBar/>
       <Routes>
-        <Route path='/'element={<Home/>} />
+        <Route path='/Home'element={<Home/>} />
         <Route path='/Products'element={<Products/>}/>
         <Route index element={<ProductList/>  }/>
-        <Route path='list' element={<ProductList/>}/>
-        <Route path='details' element={<ProductsDetail/>}/>
+        <Route path='/list' element={<ProductList/>}/>
+        <Route path='/details' element={<ProductsDetail/>}/>
         <Route path='/login/:user'element={<Login/>} />
         <Route path='/NewProducts' element={<NewProducts/>} />
         <Route path= '/UpdateProduct/:id' element={<UpdateProduct/>}/>

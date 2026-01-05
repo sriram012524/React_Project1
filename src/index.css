@@ -117,3 +117,11 @@ button:focus-visible {
 .rightBox {
   background: linear-gradient(135deg, #ff512f, #dd2476);
 }
+.PL{
+  text-align: end;
+  padding: 10px 10px 10px 10px  ;
+  margin: 10px;
+   background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  
+}

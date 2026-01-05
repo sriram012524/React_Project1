@@ -19,7 +19,7 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/"> Home </Nav.Link>
+            <Nav.Link as={Link} to="/Home"> Home </Nav.Link>
             <Nav.Link as={Link} to="/login/Dear User🤩!!">Login</Nav.Link>
             <Nav.Link as={Link} to="/Products">Products</Nav.Link>
             <Nav.Link as={Link} to="/Signup">Signup</Nav.Link>
@@ -32,7 +32,6 @@ function NavBar() {
               className="me-2"
               aria-label="Search"
             />
-          
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
